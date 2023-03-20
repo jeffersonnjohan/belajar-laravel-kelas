@@ -41,6 +41,7 @@ Route::get('/greet/{nama}', function($nama){
         'nama' => $nama,
         'nim' => $nim
     ]);
+
 });
 
 Route::redirect('/contact-us','/hubungi-kami');
@@ -65,5 +66,5 @@ Route::fallback(function(){
 Route::get('/test', function(Request $request){
     $name = $request->query('name');
     $nim = $request->nim;
-    return "you are trying to search $name, nim $nim";
+    return "you are trying to search $name, nim $nim, are you agree?";
 });
